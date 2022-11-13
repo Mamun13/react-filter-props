@@ -85,7 +85,7 @@ const data =[{
 {
     id : 8,
     image : "https://cdn.mwallpapers.com/photos/celebrities/superheroes/superman-henry-cavill-2020-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-h4vjo.jpg",
-    name : "Superman",
+    name : "Man Of Steel",
     category : "dc",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 },

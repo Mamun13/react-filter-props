@@ -28,6 +28,12 @@ const Movie = () => {
             <header>
                 <div className="col-lg-3 filter pt-3">
                     <div className="nav-item text-center bg-secondary p-4 rounded-pill">
+                    <button 
+                        className='border-0 bg-transparent text-light text-uppercase fw-bold'
+                        onClick={()=>setmovieData(CartApi)}
+                        >
+                            All
+                        </button>
                         <button 
                         className='border-0 bg-transparent text-light text-uppercase fw-bold'
                         onClick={()=>filterItem("marvel")}
