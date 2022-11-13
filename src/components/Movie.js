@@ -2,20 +2,64 @@ import React from 'react'
 import { useState } from 'react'
 import Cards from './Card/Cards'
 import CartApi from "../CartApi"
+// import { Link } from "react-router-dom";
+
 
 
 const Movie = () => {
     const [movieData, setmovieData] = useState(CartApi);
 
+    const filterItem = (category) => {
+        const updatedList = CartApi.filter((curElem) => {
+            return curElem.category === category;
+        });
+        setmovieData(updatedList);
+    }
+
+    // const dcFilter =(categoryTwo)=>{
+    //     const dcUpdatedList = CartApi.filter((curElemtwo) =>{
+    //         return curElemtwo.categoryTwo = categoryTwo;
+    //     });
+    //     setmovieData(dcUpdatedList);
+    // }
+
     return (
         <>
+            <header>
+                <div className="col-lg-3 filter pt-3">
+                    <div className="nav-item text-center bg-secondary p-4 rounded-pill">
+                        <button 
+                        className='border-0 bg-transparent text-light text-uppercase fw-bold'
+                        onClick={()=>filterItem("marvel")}
+                        >
+                            Marvel
+                        </button>
+                        <button 
+                        className='border-0 bg-transparent text-light text-uppercase fw-bold'
+                        onClick={()=>filterItem("dc")}
+                        >
+                            DC</button>
+                        {/* <ul className='list-group ps-5 fw-bold list-group-horizontal list-unstyled ps-2 text-center'>
+                            <Link to="#" onClick={() => filterItem("rock")} className=' txt-hover text-decoration-none text-light text-uppercase'>
+                                <li className='pe-4'>Marvel</li>
+                            </Link>
+                            <Link to="#" className='text-decoration-none text-light text-uppercase txt-hover '>
+                                <li className='pe-4'>DC</li>
+                            </Link>
+                            <Link to="#" className='text-decoration-none text-light text-uppercase txt-hover '>
+                                <li className='pe-4'>Loki</li>
+                            </Link>
+                        </ul> */}
+                    </div>
+                </div>
+            </header>
             <section id='card'>
                 <div className="container">
                     <div className="row ">
                         <Cards moviData={movieData} />
                     </div>
                 </div>
-        </section>
+            </section>
         </>
     )
 }

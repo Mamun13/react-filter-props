@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 const Cards = ({ moviData }) => {
-    console.log(moviData)
+    // console.log(moviData)
     return (
         <>
             {moviData.map((curElement) => {
