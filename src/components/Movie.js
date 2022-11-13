@@ -1,4 +1,5 @@
 import React from 'react'
+import "../components/Movie.scss"
 import { useState } from 'react'
 import Cards from './Card/Cards'
 import CartApi from "../CartApi"
@@ -29,19 +30,19 @@ const Movie = () => {
                 <div className="col-lg-3 filter pt-3">
                     <div className="nav-item text-center bg-secondary p-4 rounded-pill">
                     <button 
-                        className='border-0 bg-transparent text-light text-uppercase fw-bold'
+                        className=' color border-0 fs-5 bg-transparent text-uppercase fw-bold'
                         onClick={()=>setmovieData(CartApi)}
                         >
                             All
                         </button>
                         <button 
-                        className='border-0 bg-transparent text-light text-uppercase fw-bold'
+                        className='border-0 bg-transparent fs-5 color text-uppercase fw-bold'
                         onClick={()=>filterItem("marvel")}
                         >
                             Marvel
                         </button>
                         <button 
-                        className='border-0 bg-transparent text-light text-uppercase fw-bold'
+                        className='border-0 fs-5 bg-transparent color text-uppercase fw-bold'
                         onClick={()=>filterItem("dc")}
                         >
                             DC</button>
