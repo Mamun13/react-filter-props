@@ -3,6 +3,7 @@ import "../components/Movie.scss"
 import { useState } from 'react'
 import Cards from './Card/Cards'
 import CartApi from "../CartApi"
+import Search from './searchBar/Search'
 // import { Link } from "react-router-dom";
 
 
@@ -16,14 +17,6 @@ const Movie = () => {
         });
         setmovieData(updatedList);
     }
-
-    // const dcFilter =(categoryTwo)=>{
-    //     const dcUpdatedList = CartApi.filter((curElemtwo) =>{
-    //         return curElemtwo.categoryTwo = categoryTwo;
-    //     });
-    //     setmovieData(dcUpdatedList);
-    // }
-
     return (
         <>
             <header>
@@ -60,6 +53,7 @@ const Movie = () => {
                     </div>
                 </div>
             </header>
+            <Search/>
             <section id='card'>
                 <div className="container">
                     <div className="row ">
